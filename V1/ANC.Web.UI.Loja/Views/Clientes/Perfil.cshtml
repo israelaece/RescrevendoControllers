@@ -1,0 +1,24 @@
+﻿@model ANC.Web.UI.Loja.ViewModels.PosicaoDoCliente
+
+<div class="col-md-12">
+    <div class="panel panel-default">
+        <div class="panel-heading text-right"><small><b>USUÁRIO</b></small></div>
+        <div class="panel-body">
+            <img src="@Model.Foto" class="img-responsive img-circle center-block" width="70" height="70" alt="">
+            <p class="text-center">
+                @Model.Nome.ToUpper()<br />
+                <span>@Model.Email</span>
+            </p>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading text-right"><small><b>POSIÇÃO</b></small></div>
+        <div class="panel-body">
+            Pedidos Realizados <span class="badge pull-right">@Model.QuantidadeDePedidos</span>
+            <br />
+            Valor Total <span class="badge pull-right">@Model.TotalDosPedidos.ToString("N2")</span>
+            <br />
+            Último Pedido <span class="badge pull-right">@(Model.DataDoUltimoPedido != null ? Model.DataDoUltimoPedido.Value.ToString("dd/MM/yyyy") : "- -")</span>
+        </div>
+    </div>
+</div>

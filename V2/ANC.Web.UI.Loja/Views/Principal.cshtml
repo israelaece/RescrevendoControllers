@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+        .table tbody > tr > td {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <br /><br />
+
+    <div class="container">
+        <div class="col-md-3">
+            @{Html.RenderAction("Perfil", "Clientes");}
+        </div>
+        <div class="col-md-9">
+            @RenderBody()
+        </div><div class="col-md-12">
+            <hr />
+            <p class="text-right"><b>V2</b></p>
+        </div>
+    </div>
+</body>
+</html>

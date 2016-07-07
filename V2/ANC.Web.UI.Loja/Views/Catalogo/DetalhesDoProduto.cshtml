@@ -1,0 +1,30 @@
+﻿@model ANC.Web.UI.Loja.Models.ProdutoDisponivel
+
+@{
+    ViewBag.Title = "DetalhesDoProduto";
+    Layout = "~/Views/Principal.cshtml";
+}
+
+<div class="page-header">
+    <h1>Detalhes do Produto</h1>
+</div>
+
+<div class="col-md-12">
+    <div class="media">
+        <div class="media-left media-middle">
+            <img class="media-object" src="~/Content/Imagens/Produtos/@Model.Imagem" alt="@Model.Nome" width="300">
+        </div>
+        <div class="media-body">
+            <h3 class="media-heading">@Model.Nome</h3>
+            @Model.Categoria<br />
+            Qtde. em Estoque: <b>@Model.QuantidadeEmEstoque</b>
+            <br /><br />
+            <h3 class="pull-right">Valor: @Model.Valor.ToString("N2")</h3>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12">
+    <br />
+    <a href="/Catalogo/Index" class="btn btn-info">Voltar</a>
+</div>

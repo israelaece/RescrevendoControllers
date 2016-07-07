@@ -1,0 +1,42 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Adicionar</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <br /><br />
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <p>
+                <h2 class="text-center">LOJA <small>Cadastro de Clientes <sup>V1</sup></small></h2>
+                <br /><br />
+            </p>
+            <form action="/Clientes/Adicionar" method="post">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nome</label>
+                    <input type="text" class="form-control" id="Nome" name="Nome" placeholder="Nome" value="Israel Aece">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">E-mail</label>
+                    <input type="email" class="form-control" id="Email" name="Email" placeholder="E-mail" value="ia@israelaece.com">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Foto</label>
+                    <input type="url" class="form-control" id="Foto" name="Foto" value="http://localhost:8866/Content/Imagens/Clientes/Israel.png" placeholder="Endereço da Foto">
+                </div>
+                <button type="submit" class="btn btn-default pull-right">Cadastrar</button>
+            </form>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</body>
+</html>

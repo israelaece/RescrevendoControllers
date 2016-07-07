@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "V1", "V1", "{8B682B9A-58C0-4F2F-82C8-B6D849A297CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "V2", "V2", "{555DBF7F-D4AD-4F8F-9010-9B9CEA5B1AF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ANC.Web.UI.Loja", "V1\ANC.Web.UI.Loja\ANC.Web.UI.Loja.csproj", "{DC0C1A4B-D05E-4914-A32A-905A31259B3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ANC.Web.UI.Loja", "V2\ANC.Web.UI.Loja\ANC.Web.UI.Loja.csproj", "{9DC57702-8B96-4C79-8BBF-567FE7E9517C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC0C1A4B-D05E-4914-A32A-905A31259B3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC0C1A4B-D05E-4914-A32A-905A31259B3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC0C1A4B-D05E-4914-A32A-905A31259B3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC0C1A4B-D05E-4914-A32A-905A31259B3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DC57702-8B96-4C79-8BBF-567FE7E9517C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DC57702-8B96-4C79-8BBF-567FE7E9517C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DC57702-8B96-4C79-8BBF-567FE7E9517C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DC57702-8B96-4C79-8BBF-567FE7E9517C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DC0C1A4B-D05E-4914-A32A-905A31259B3E} = {8B682B9A-58C0-4F2F-82C8-B6D849A297CC}
+		{9DC57702-8B96-4C79-8BBF-567FE7E9517C} = {555DBF7F-D4AD-4F8F-9010-9B9CEA5B1AF2}
+	EndGlobalSection
+EndGlobal

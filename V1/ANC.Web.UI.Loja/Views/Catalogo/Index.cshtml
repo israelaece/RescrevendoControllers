@@ -1,0 +1,46 @@
+﻿@model IList<ANC.Web.UI.Loja.Models.Produto>
+
+@{
+    ViewBag.Title = "Catálogo";
+    Layout = "~/Views/Principal.cshtml";
+}
+
+
+<div class="page-header">
+    <h1>Catálogo de Produtos</h1>
+</div>
+
+<div class="col-md-12">
+    <table class="table">
+        <tbody>
+            @foreach (var produto in Model)
+            {
+                <tr>
+                    <td width="10">
+                        <a href="/Catalogo/DetalhesDoProduto/@produto.Id"><img src="~/Content/Imagens/Produtos/@produto.Imagem" width="80" height="80" alt="@produto.Nome" /></a>
+                    </td>
+                    <td>
+                        <h5><b>@produto.Nome.ToUpper()</b></h5>
+                        <small>@produto.Categoria</small>
+                    </td>
+                    @if (produto.QuantidadeEmEstoque > 0)
+                    {
+                        <td align="center">
+                            <h3>@produto.Valor.ToString("N2")<br /><small>Qtde. em Estoque: @produto.QuantidadeEmEstoque</small></h3>
+                        </td>
+                        <td>
+                            <a href="/Pedidos/Comprar/@produto.Id" type="button" class="btn btn-warning btn-sm pull-right">Comprar</a>
+                        </td>
+                    }
+                    else
+                    {
+                        <td align="center"></td>
+                        <td>
+                            <span class="label label-danger pull-right">Indisponível</span>
+                        </td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

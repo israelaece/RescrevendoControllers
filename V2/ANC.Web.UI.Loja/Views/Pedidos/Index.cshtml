@@ -1,0 +1,65 @@
+﻿@model IEnumerable<ANC.Web.UI.Loja.Models.PedidoRealizado>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Principal.cshtml";
+}
+
+<div class="page-header">
+    <h1>Pedidos Realizados</h1>
+</div>
+
+<div class="col-md-12">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>
+
+                </th>
+                <th>
+                    Identificador
+                </th>
+                <th>
+                    Status
+                </th>
+                <th>
+                    Transp.
+                </th>
+                <th>
+                    Data
+                </th>
+                <th align="right">
+                    Valor
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pedido in Model)
+            {
+                <tr>
+                    <td align="center">
+                        <a href="#">Detalhes do Pedido</a>
+                    </td>
+                    <td>
+                        @pedido.PedidoId.ToString().ToUpper()
+                    </td>
+                    <td align="center">
+                        <span class="label label-default">PAGAMENTO</span>
+                    </td>
+                    <td align="center">
+                        @pedido.NomeDaTransportadora
+                    </td>
+                    <td align="center">
+                        @pedido.Data.ToString("dd/MM/yyyy")
+                    </td>
+                    <td align="right">
+                        <h4><b>@pedido.Total.ToString("N2")</b></h4>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="col-md-12">
+    <a href="/Catalogo/Index" class="btn btn-warning pull-right">Continuar Comprando</a>
+</div>
